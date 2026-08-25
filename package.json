@@ -4,12 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "npm run build && vite --host",
+    "build": "npm run lint && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "npm run build && vite preview",
-    "deploy": "npm run build && wrangler deploy",
-    "cf-typegen": "wrangler types"
+    "deploy": "npm run build && npm run just-deploy",
+    "just-deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "just-test": "c8 node -r source-map-support/register outputs/tests/tests.js",
+    "test": "npm run build && npm run just-test"
   },
   "dependencies": {
     "react": "^19.2.8",
