@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "@everyonesoftware/common": "^42.0.0"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.54.0",
