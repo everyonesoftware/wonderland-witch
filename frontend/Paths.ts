@@ -7,6 +7,7 @@ function getImagePath(fileName: string): string
 
 export const Paths = {
     images: {
-        homeBackground: getImagePath("home-background.jpeg"),
+        trailSigns: getImagePath("trail-signs.jpeg"),
+        trailMirrors: getImagePath("trail-mirrors.jpeg"),
     },
 };
